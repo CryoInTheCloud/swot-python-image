@@ -1,10 +1,10 @@
-# CryoInTheCloud JupyterHub user image
+# CryoInTheCloud SWOT JupyterHub user image
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/CryoInTheCloud/hub-image/HEAD)
-[![Build and push container image](https://github.com/CryoInTheCloud/hub-image/actions/workflows/build.yaml/badge.svg)](https://github.com/CryoInTheCloud/hub-image/actions/workflows/build.yaml)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/CryoInTheCloud/swot-python-image/HEAD)
+[![Build and push container image](https://github.com/CryoInTheCloud/swot-python-image/actions/workflows/build.yaml/badge.svg)](https://github.com/CryoInTheCloud/swot-python-image/actions/workflows/build.yaml)
 
 The JupyterHub docker image used for [hub.cryointhecloud.com](https://cryointhecloud.com),
-hosted on https://quay.io/repository/cryointhecloud/cryo-hub-image
+hosted on https://quay.io/repository/cryointhecloud/swot-python-image
 
 The image is built with [repo2docker](https://repo2docker.readthedocs.io), which uses
 Ubuntu Bionic Beaver (18.04) as the base image. If you'd like to run a test build
@@ -15,13 +15,13 @@ doc](https://repo2docker.readthedocs.io/en/latest/config_files.html#config-files
 
 ## Updating packages in this repository
 
-You can add or update packages on the cryointhecloud hub by making pull requests to this
+You can add or update packages on the CryoCloud hub by making pull requests to this
 repository. Follow these steps:
 
-1. Edit either the [`environment.yml`](https://github.com/CryoInTheCloud/hub-image/edit/main/environment.yml)
-   file (for most packages) or [`apt.txt`](https://github.com/CryoInTheCloud/hub-image/edit/main/apt.txt)
+1. Edit either the [`environment.yml`](https://github.com/CryoInTheCloud/swot-python-image/edit/main/environment.yml)
+   file (for most packages) or [`apt.txt`](https://github.com/CryoInTheCloud/swot-python-image/edit/main/apt.txt)
    file (for packages that need to be used in the Linux Desktop environment in the cloud).
-2. Start a [pull request](https://github.com/CryoInTheCloud/hub-image/pulls) -
+2. Start a [pull request](https://github.com/CryoInTheCloud/swot-python-image/pulls) -
    you can even do that just from the GitHub UI! A bot will comment with a link to
    [mybinder.org](https://mybinder.org) where you can test your pull request to make sure it works
    as you would expect.
@@ -65,7 +65,7 @@ run terminal commands, edit and run notebooks, or start a desktop VNC session.
 ## Updating the CryoCloud JupyterHub to use a new image
 
 After your PR gets merged, our GitHub Actions will build and push a new image to 
-[our image repository](https://quay.io/repository/cryointhecloud/cryo-hub-image?tab=tags) on quay.io. You
+[our image repository](https://quay.io/repository/cryointhecloud/swot-python-image?tab=tags) on quay.io. You
 can monitor the progress of this in the GitHub Actions tab in this repo.
 
 Once a new tag appears, someone with JupyterHub Admin permissions on the CryoCloud hub will have to
@@ -74,7 +74,7 @@ the image on CryoCloud and then ask a 2i2c engineer to update the image by sendi
 
 1. When starting CryoCloud, instead of using `Python`, select `Other` from the `Image` selector.
 2. Add the tag of the image you want under `Custom` to use the new tag pushed for the PR in the
-   [quay.io](https://quay.io/repository/cryointhecloud/cryo-hub-image?tab=tags) tags page. Make sure there are
+   [quay.io](https://quay.io/repository/cryointhecloud/cryo-swot-python-image?tab=tags) tags page. Make sure there are
    no trailing spaces!
 3. Hit 'Start'. Note that due to a bug in your image, CryoCloud may not start up and will show error messages. The image will need to be fixed if this occurs.
 4. Make sure all of the new tools are present and test that your imports work properly in a notebook.
