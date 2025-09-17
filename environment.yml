@@ -1,4 +1,4 @@
-name: cryocloud
+name: swot-image
 
 channels:
   - conda-forge
@@ -63,8 +63,6 @@ dependencies:
   - numba~=0.60.0 # high-performance numerics
   - numpy==1.26.4
   - pandas>=2.0.1,<3.0
-  - scikit-image~=0.24.0
-  - scikit-learn>=1.2.2,<2.0.0
   - scipy>=1.10
   - statsmodels==0.13.5
   - sympy~=1.12
@@ -83,9 +81,6 @@ dependencies:
   - matplotlib~=3.9.0
   - plotly~=5.18.0
   - seaborn~=0.13.2 # statistical plotting with matplotlib
-
-  # Machine Learning packages
-  - py-xgboost~=2.1.1=cpu*
 
   # Geospatial data packages
   - geopandas>=0.14.4
@@ -131,17 +126,8 @@ dependencies:
   - flake8~=7.1
   - tqdm~=4.66 # progress bars, with notebook support
 
-  # Packages specific to climate work
-  - esmpy~=8.4.2
-  - xmip~=0.7.1
-
-  # Packages specific to cryo work
-  - h5coro~=0.0.6
-  - icepyx~=1.2.0
-  - itslive~=0.3.2
-  - is2view~=0.0.8
+  # Packages specific to swot work
   - sliderule~=4.5
-  - snowexsql~=0.5
 
   # Packages specific to technical publishing
   - mystmd>=1.3.26
